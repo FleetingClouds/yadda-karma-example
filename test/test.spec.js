@@ -13,7 +13,7 @@ module.export = (function () {
         loaderFeature = $.get('base/test/features/example.feature').responseText,
         feature = parser.parse(loaderFeature);
 
-    Yadda.plugins.mocha.AsyncScenarioLevelPlugin.init();
+    Yadda.plugins.mocha.ScenarioLevelPlugin.init();
 
     scenarios(feature.scenarios, function (scenario, done) {
         yadda.yadda(scenario.steps, done);
